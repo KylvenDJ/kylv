@@ -1,25 +1,25 @@
 # kylven,  QUESTÃO 1:
+#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-	float valor_numerico();
+int valor(int n){
+int i, soma = 100;
 
-int main () {
+	for(i=0; i<n; i++){
+	soma=soma+i;
+}
+return soma;
+}
+
+int main(){
 	setlocale(LC_ALL, "Portuguese_Brazil: ");
-
-	valor_numerico();
-}
-
-	float valor_numerico() {
-	int numero;
-	printf("\nDigite um numero:");
-	scanf("%d", &numero);
-
-		if(numero <= 0) {
-		printf("\nEsse numero fica: Negativo");
-}
-	else{
-		
-	printf("\nEsse numero fica: Positivo");
-}
+	
+	int n,calculo = 100;
+	printf("Digite um numero inteiro positivo: ");
+	scanf("%d", &n);
+	calculo = valor(n);
+	printf("\n\n\t\tA soma dos valores entre 1 fica %d: %d \n\n", n, calculo);
+	
+return 0;
 }
